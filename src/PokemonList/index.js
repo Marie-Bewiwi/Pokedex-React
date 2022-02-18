@@ -7,7 +7,7 @@ function PokemonList({ input }) {
     <div>
       {pokemons
         .filter((pokemon) => {
-          if (pokemon.names.fr.includes(input)) {
+          if (pokemon.names.fr.toLowerCase().includes(input)) {
             return true;
           }
         })
