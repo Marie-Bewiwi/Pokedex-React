@@ -1,10 +1,10 @@
 import React from "react";
 import PokemonCard from "./PokemonCard";
 import pokemons from "../pokemons.json";
-
+import "./PokemonList.css";
 function PokemonList({ input }) {
   return (
-    <div>
+    <div class="list">
       {pokemons
         .filter((pokemon) => {
           if (pokemon.names.fr.toLowerCase().includes(input)) {
