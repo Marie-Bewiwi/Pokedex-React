@@ -1,7 +1,8 @@
 import React from "react";
 import PokemonCard from "./PokemonCard";
-import pokemons from "../pokemons.json";
+import pokemons from "../../pokemons.json";
 import "./PokemonList.css";
+
 function PokemonList({ input }) {
   return (
     <div class="list">

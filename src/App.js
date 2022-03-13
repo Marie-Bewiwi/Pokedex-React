@@ -1,19 +1,19 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import "./Header";
-import Header from "./Header";
-import PokemonList from "./PokemonList";
-import SearchBar from "./SearchBar";
+import Header from "./common/Header";
+import Homepage from "./Homepage";
+import Detailspage from "./Detailspage";
 
 function App() {
-  const [input, setInput] = React.useState("");
-
   return (
-    <div className="App">
+    <BrowserRouter>
       <Header></Header>
-      <SearchBar input={input} setInput={setInput}></SearchBar>
-      <PokemonList input={input}></PokemonList>
-    </div>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/pokemon/:pokemonId" element={<Detailspage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
